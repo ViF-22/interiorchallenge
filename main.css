@@ -1,0 +1,391 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 1.2em;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.37em;
+  line-height: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 19rem;
+  gap: 32px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+nav ul li a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.open-nav {
+  transform: translateX(0);
+}
+
+.close {
+  float: right;
+  margin: 1.2em;
+  cursor: pointer;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.logo {
+  font-family: "Crimson Pro";
+  text-decoration: none;
+  color: white;
+  padding: 7px 11px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.textBox {
+  margin-top: 90px;
+  max-width: 291px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+.textBox h1 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25em;
+  padding: 0px;
+  margin: 0;
+}
+.textBox p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  padding: 0px;
+  line-height: 17px;
+  margin: 0;
+}
+.textBox .more {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+.textBox .more::after {
+  content: " →";
+}
+
+.imgBox {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px dashed palegreen;
+  width: 100%;
+  min-height: 254px;
+  height: 30vh;
+}
+
+.containerpic {
+  background-image: url("photo1.png");
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  border: 1px solid gold;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.themain {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  width: 279px;
+  height: 106px;
+  background-color: black;
+  position: relative;
+  bottom: -50px;
+  left: 50px;
+}
+.card .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 9px;
+  padding-top: 8px;
+}
+.up p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #828282;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 12px;
+}
+
+.text {
+  width: 70%;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+footer {
+  width: 220px;
+  position: absolute;
+  bottom: 0px;
+  font-family: "Montserrat";
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #d9d9d9;
+  padding-bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+footer a {
+  color: #828282;
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+  .textBox {
+    max-width: 70%;
+  }
+  .textBox h1 {
+    font-size: 36px;
+  }
+  .textBox p {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 920px) {
+  body {
+    margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+    top: 50px;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    gap: 5.375em;
+  }
+  .themain {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 169px 0 0 0;
+    margin: 0;
+  }
+  .imgBox {
+    padding-left: 120px;
+  }
+  .containerpic {
+    background-image: url("photo1.png");
+    display: block;
+    min-width: 600px;
+    max-width: 740px;
+    min-height: 490px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 61px;
+  }
+  p {
+    font-size: 24px;
+    line-height: 29px;
+    width: 409px;
+  }
+  p.more {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .textBox {
+    position: relative;
+    margin-top: 0px;
+    max-width: 480px;
+    margin-bottom: 0;
+    top: 80px;
+  }
+  .card {
+    display: block;
+    position: relative;
+    width: 410px;
+    height: 189px;
+    background-color: black;
+    bottom: -80px;
+    left: 20%;
+  }
+  .card .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 17px;
+    padding-top: 14px;
+  }
+  .up p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+    margin: 0;
+  }
+  .subtitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #828282;
+  }
+  .name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 29px;
+  }
+  .text {
+    width: 70%;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 22px;
+    padding-top: 27px;
+    margin-top: 0;
+  }
+  .wrapper {
+    position: relative;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=main.css.map */
